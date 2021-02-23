@@ -123,7 +123,53 @@ x = “a” if n > 1 else “b”
 if 18 <= age < 65:
 ```
 
+## Loops
+```python
+# For loops
+for n in range(1, 10, 1): # using the range function
+    print(n)
 
+for item in 'Python':   
+    print(item)     # P y t h o n
+
+for item in ['This', 'is', 'a', 'list', 'of', 'strings']:
+    print(item)
+
+# While loops
+while n < 10: 
+    print(n)
+    n += 1
+else:
+    print('loop ended')  # this is executed after the loop ends
+
+```
+
+## Lists
+```python
+names = ['John', 'Bob', 'Daniel', 'Sarah', 'Mary']
+print (names)       # ['John', 'Bob', 'Daniel', 'Sarah', 'Mary']
+print(names[2])     # Daniel
+print(names[-1])    # Mary
+print(names[2:])    # ['Daniel', 'Sarah', 'Mary']
+names[0] = 'Jon'
+```
+
+## 2D Lists
+```python
+# List within a list
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+matrix[0]       # [1, 2, 3]
+matrix[0][1]    # 2
+
+# Print each item of a 2D list
+for row in matrix:      # for every list in matrix
+    for item in row:    # for every item in each list
+        print(item)
+```
 
 
 ## About this cheat sheet
