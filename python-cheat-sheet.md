@@ -147,7 +147,7 @@ else:
 ## Lists
 ```python
 names = ['John', 'Bob', 'Daniel', 'Sarah', 'Mary']
-print (names)       # ['John', 'Bob', 'Daniel', 'Sarah', 'Mary']
+print(names)       # ['John', 'Bob', 'Daniel', 'Sarah', 'Mary']
 print(names[2])     # Daniel
 print(names[-1])    # Mary
 print(names[2:])    # ['Daniel', 'Sarah', 'Mary']
@@ -169,6 +169,22 @@ matrix[0][1]    # 2
 for row in matrix:      # for every list in matrix
     for item in row:    # for every item in each list
         print(item)
+```
+## List methods
+```python
+numbers = [5, 2, 1, 7, 4]
+numbers.append(1)           # adds value at the end of the list
+numbers.insert(0, 10)       # inserts 10 at the 0 position
+numbers.remove(5)           # removes the 5th item
+numbers.clear()             # empties the list
+numbers.pop()               # removes the last item on the list
+numbers.index(5)            # finds the first occurrence of the value   
+5 in numbers                # checks if the number 5 is on the list 
+numbers.count(5)            # count the times the number 5 is on the list   
+numbers.sort()              # sorts the list in ascending order
+numbers.reverse()           # sorts the list in descending order
+numbers2 = numbers.copy()   # copies the list to another list
+
 ```
 
 
