@@ -152,6 +152,77 @@ print(names[2])     # Daniel
 print(names[-1])    # Mary
 print(names[2:])    # ['Daniel', 'Sarah', 'Mary']
 names[0] = 'Jon'
+
+# Creating lists
+letters = ["a", "b", "c"]     
+matrix = [[0, 1], [1, 2]]
+zeros = [0] * 5
+combined = zeros + letters
+numbers = list(range(20))
+ 
+# Accessing items
+letters = ["a", "b", "c", "d"]
+letters[0]  # "a"
+letters[-1] # "d"
+ 
+# Slicing lists 
+letters[0:3]   # "a", "b", "c"
+letters[:3]    # "a", "b", "c"
+letters[0:]    # "a", "b", "c", "d"
+letters[:]     # "a", "b", "c", "d"
+letters[::2]   # "a", "c"
+letters[::-1]  # "d", "c", "b", "a" 
+ 
+# Unpacking 
+first, second, *other = letters # Unpacking the 'letters' list values into 'first', 'second' variables
+ 
+# Looping over lists 
+for letter in letters: 
+    ... 
+ 
+for index, letter in enumerate(letters): 
+    ... 
+ 
+# Adding items 
+letters.append("e")
+letters.insert(0, "-")
+ 
+# Removing items 
+letters.pop()
+letters.pop(0)
+letters.remove("b")
+del letters[0:3]
+ 
+# Finding items 
+if "f" in letters: 
+    letters.index("f")
+ 
+# Sorting lists 
+letters.sort()
+letters.sort(reverse=True) 
+ 
+# Custom sorting 
+items = [
+    ("Product1", 10),
+    ("Product2", 9),
+    ("Product3", 11)
+]
+ 
+items.sort(key=lambda item: item[1])
+ 
+# Map and filter 
+prices = list(map(lambda item: item[1], items))
+expensive_items = list(filter(lambda item: item[1] >= 10, items))
+ 
+# List comprehensions 
+prices = [item[1] for item in items]
+expensive_items = [item for item in items if item[1] >= 10]
+ 
+# Zip function 
+list1 = [1, 2, 3]
+list2 = [10, 20, 30]
+combined = list(zip(list1, list2))    # [(1, 10), (2, 20)]
+
 ```
 
 ## 2D Lists
@@ -187,7 +258,45 @@ numbers2 = numbers.copy()   # copies the list to another list
 
 ```
 
+## Tuples
+```python
+# Unlike lists ,tuples cannot be modified later
+point = (1, 2, 3)
+point(0:2)     # (1, 2)
+x, y, z = point     # Unpacking the 'point' tuple values into x, y, z variables
+if 10 in point: 
+    ... 
+ 
+# Swapping variables 
+x = 10
+y = 11
+x, y = y, x 
+```
+## Dictionaries
+```python
+# Key, value pairs
+customer = {
+    "name": "John Smith",   # string
+    "age": 30,              # int
+    "is_verified": True     # boolean
+}
+customer["name"]                        # John Smith
+customer.get("name")                    # John Smith
+customer["birthdate"] = "Jan 1, 1980"   # adds new key-value pair to the 'customer' dictionary.
 
+point = {"x": 1, "y": 2}
+point = dict(x=1, y=2)
+point["z"] = 3
+if "a" in point: 
+    ... 
+point.get("a", 0)   # 0
+del point["x"]
+for key, value in point.items(): 
+   ... 
+ 
+# Dictionary comprehensions 
+values = {x: x * 2 for x in range(5)}
+```
 ## About this cheat sheet
 
 **Colaborators**
